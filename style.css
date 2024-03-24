@@ -35,6 +35,7 @@ body {
   border: 1px solid grey; 
   transform: scale(1.05);
 }
+.card.flipped,
 .card.hover {
   border: 1px solid grey; 
   transform: scale(1.05);
@@ -61,7 +62,7 @@ body {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  animation: 'glowing 1.5s infinite alternate'; 
+  animation: glowing 1.5s infinite alternate; 
 }
 @keyframes glowing {
   0% { box-shadow: 0 0 10px #4CAF50; }
