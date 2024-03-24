@@ -1,0 +1,100 @@
+*{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover; 
+}
+.background1 {
+  background-image: url('achtergrond1.jpg');
+}
+.background2 {
+  background-image: url('achtergrond2.jpg');
+}
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-gap: 10px;
+}
+.card {
+  width: 150px;
+  height: 150px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  background-size: 150px 150px; 
+  transition: transform 0.3s ease-in-out;
+}
+.card.flipped,
+.card.hover {
+  border: 1px solid grey; 
+  transform: scale(1.05);
+}
+.card.hover {
+  border: 1px solid grey; 
+  transform: scale(1.05);
+}
+.card.valsspelen {
+  border: 2px solid lightgrey;
+  transform: scale(1.05);
+}
+.button-container {
+  position: absolute;
+  top: 85%; 
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.startButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  animation: 'glowing 1.5s infinite alternate'; 
+}
+@keyframes glowing {
+  0% { box-shadow: 0 0 10px #4CAF50; }
+  50% { box-shadow: 0 0 20px #4CAF50, 0 0 30px #4CAF50; }
+  100% { box-shadow: 0 0 10px #4CAF50; }
+}
+.startButton:hover {
+  background-color: #45a049;
+}.resetButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.resetButton:hover {
+  background-color: #45a049;
+}
+.scoreboard {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  z-index: 999;
+}
